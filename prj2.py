@@ -8,7 +8,7 @@ st.title("E-mail Ham or Spam Classifier")
 model=pickle.load(open(r"model.pkl",'rb'))
 Vectorizer=pickle.load(open(r"model2.pkl", 'rb'))
 
-Message=st.text_input("Enter the mail")
+Message=st.text_area("Enter the mail")
 if Message:
     transformed_message = Vectorizer.transform([Message])
     result = model.predict(transformed_message)[0]
