@@ -3,7 +3,7 @@ import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 
 st.image(r"innomatcis logo.webp")
-st.title("E-mail Spam & Ham text Classifier")
+st.title("E-mail Spam or Ham text Classification")
 
 model=pickle.load(open(r"model.pkl",'rb'))
 Vectorizer=pickle.load(open(r"model2.pkl", 'rb'))
